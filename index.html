@@ -53,6 +53,10 @@
 		<script>
 			// var myChart = echarts.init(document.getElementById('main'));
 			// 	myChart.setOption(option);
+			
+			$.get('https://geo.datav.aliyun.com/areas_v2/bound/100000_full.json', function(geoJson) {
+				console.log(geoJson)
+			})
 
 			function autoScroll(obj) {
 				$(obj).find("ul").animate({
