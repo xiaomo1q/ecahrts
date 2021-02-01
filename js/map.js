@@ -25,6 +25,7 @@ $(function() {
 	function mapRender() {
 		mapChart.clear()
 		$.ajaxSettings.async = false;
+	
 		$.get(mapUrl + mapCode + '.json', function(geoJson) {
 			echarts.registerMap('shanghai', geoJson);
 			mapData = []
