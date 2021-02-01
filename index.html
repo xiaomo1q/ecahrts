@@ -49,13 +49,16 @@
 		<script src="./js/main4.js"></script>
 		<script src="./js/main5.js"></script>
 		<script src="./js/main6.js"></script>
-		<script type="text/javascript" src="./js/map.js"></script>
+		<script src="./js/map.js"></script>
 		<script>
 			// var myChart = echarts.init(document.getElementById('main'));
 			// 	myChart.setOption(option);
 			
-			$.get('https://geo.datav.aliyun.com/areas_v2/bound/100000_full.json', function(geoJson) {
-				console.log(geoJson)
+			$.ajax({
+				url: "https://geo.datav.aliyun.com/areas_v2/bound/100000_full.json",
+				success: function(geoJson) {
+					console.log(geoJson)
+				})
 			})
 
 			function autoScroll(obj) {
