@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" style=" width: 100%; height: 100%;">
+	<head>
+		<meta charset="utf-8">
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+		<script src="https://cdn.staticfile.org/echarts/4.5.0/echarts.min.js"></script>
+		<link rel="stylesheet" href="./index.css" />
+		<title>Echatrs组成</title>
+	</head>
+	<body>
+		<div style="width: 100%; height: 100%;" class="bodys">
+			<header> <span>全国疫情实时追踪</span> </header>
+			<div class="body">
+				<div class="body-left">
+					<div id="main6" style="width:100%; height: 245px; margin-bottom: 10px;"></div>
+					<div class="main-bg">
+						<div id="main" style="width:100%; height: 255px;"></div>
+						<div id="main3" style=""></div>
+						<div class="topRec_List">
+							<dl>
+								<dd>城市</dd>
+								<dd>新增</dd>
+								<dd>确诊</dd>
+								<dd>本土</dd>
+							</dl>
+							<div class="maquee"></div>
+						</div>
+					</div>
+
+				</div>
+				<div class="body-con" id="body-con">
+				</div>
+				<div class="body-right">
+					<div style="width: 100%; height: 300px;margin-bottom: 10px;" class="main4 flex">
+						<div id="main4" style="width: 50%; height: 300px;"></div>
+						<table cellpadding="10"> </table>
+					</div>
+					<div id="main2" style="width: 100%; height: 300px;"></div>
+					<div id="main5" style="width: 100%; height: 350px;"></div>
+				</div>
+			</div>
+		</div>
+
+		<script  type="text/javascript" src="./js/testData.js"></script>
+		<script src="./js/main.js"></script>
+		<script src="./js/main2.js"></script>
+		<script src="./js/main3.js"></script>
+		<script src="./js/main4.js"></script>
+		<script src="./js/main5.js"></script>
+		<script src="./js/main6.js"></script>
+		<script  type="text/javascript" src="./js/map.js"></script>
+		<script>
+			// var myChart = echarts.init(document.getElementById('main'));
+			// 	myChart.setOption(option);
+
+			function autoScroll(obj) {
+				$(obj).find("ul").animate({
+					marginTop: "-39px"
+				}, 500, function() {
+					$(this).css({
+						marginTop: "0px"
+					}).find("li:first").appendTo(this);
+				})
+			}
+			$(function() {
+				setInterval('autoScroll(".maquee")', 3000);
+				setInterval('autoScroll(".apple")', 2000);
+			})
+
+			let html = ''
+			$.ajax({
+				url: "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5",
+				dataType: "jsonp",
+				success: function(data) {
+					var res = data.data || "";
+					res = JSON.parse(res);
+					let list = res.areaTree[0].children.sort(function(a, b) {
+						return b.today.confirm - a.today.confirm
+					}).slice(0, 10)
+					html += '<ul>'
+					list.map(item => {
+						html += '<li>'
+						html += '<div>' + item.name + '</div>'
+						html += '<div>' + item.today.confirm + '</div>'
+						html += '<div>' + item.total.nowConfirm + '</div>'
+						html += '<div>' + item.total.wzz + '</div>'
+						html += '</li>'
+					})
+					html += '</ul>'
+					$('.maquee').html(html)
+				}
+			})
+		</script>
+	</body>
+
+
+</html>
