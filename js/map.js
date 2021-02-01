@@ -24,9 +24,9 @@ $(function() {
 	// 中国地图
 	function mapRender() {
 		mapChart.clear()
-		$.ajaxSettings.async = false;
-	
-		$.get(mapUrl + mapCode + '.json', function(geoJson) {
+		// $.ajaxSettings.async = false;
+	let geoJson = c
+		// $.get(mapUrl + mapCode + '.json', function(geoJson) {
 			echarts.registerMap('shanghai', geoJson);
 			mapData = []
 			convertData = []
@@ -211,21 +211,25 @@ $(function() {
 			};
 
 			mapChart.setOption(optionMap);
-		});
+		// });
 	}
 	// 长三角
 	function changsanjiaoRender() {
 		let geoJsonData = {}
-		$.ajaxSettings.async = false;
-		$.get('https://geo.datav.aliyun.com/areas_v2/bound/310000.json', function(geoJson) {
-			geoJsonData = geoJson
-		})
-		$.get('https://geo.datav.aliyun.com/areas_v2/bound/330000.json', function(geoJson) {
-			geoJsonData.features = geoJsonData.features.concat(geoJson.features)
-		})
-		$.get('https://geo.datav.aliyun.com/areas_v2/bound/320000.json', function(geoJson) {
-			geoJsonData.features = geoJsonData.features.concat(geoJson.features)
-		})
+		// $.ajaxSettings.async = false;
+		// $.get('https://geo.datav.aliyun.com/areas_v2/bound/310000.json', function(geoJson) {
+		// 	geoJsonData = geoJson
+		// })
+		// $.get('https://geo.datav.aliyun.com/areas_v2/bound/330000.json', function(geoJson) {
+		// 	geoJsonData.features = geoJsonData.features.concat(geoJson.features)
+		// })
+		// $.get('https://geo.datav.aliyun.com/areas_v2/bound/320000.json', function(geoJson) {
+		// 	geoJsonData.features = geoJsonData.features.concat(geoJson.features)
+		// })
+		geoJsonData = san1
+		geoJsonData.features = geoJsonData.features.concat(san2.features)
+		geoJsonData.features = geoJsonData.features.concat(san3.features)
+		
 		echarts.registerMap('长三角', geoJsonData);
 		mapData = []
 		geoJsonData.features.map(item => {
@@ -376,8 +380,9 @@ $(function() {
 	}
 	// 子地图
 	function subMapRender(list) {
-		$.ajaxSettings.async = false;
-		$.get(mapUrl + mapCode + '.json', function(geoJson) {
+		// $.ajaxSettings.async = false;
+		// $.get(mapUrl + mapCode + '.json', function(geoJson) {
+			let geoJson = nj
 			echarts.registerMap('shanghai', geoJson);
 			mapData = []
 			convertData = []
@@ -535,7 +540,7 @@ $(function() {
 			};
 			mapChart.clear()
 			mapChart.setOption(optionMap);
-		});
+		// });
 	}
 
 	$('<div class="back">返回</div>').appendTo($('#body-con'));
