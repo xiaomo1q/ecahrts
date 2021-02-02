@@ -97,11 +97,11 @@
 			
 			// $.ajaxSettings.async = false;
 			$.get('https://geo.datav.aliyun.com/areas_v2/bound/320000.json', function(list) {
-				console.log('测试getsssssss',list)
-			})
+				console.log('测试get',list)
+			},'json')
 			$.getJSON('https://geo.datav.aliyun.com/areas_v2/bound/320000.json', function(list) {
 				console.log('测试getJSON',list)
-			})
+			},'json')
 			
 			$.ajax({
 				url: "https://geo.datav.aliyun.com/areas_v2/bound/320000_full.json",
