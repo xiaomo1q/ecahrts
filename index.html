@@ -95,17 +95,19 @@
 			})
 			
 			
-			$.ajaxSettings.async = false;
-			$.get('https://www.fastmock.site/mock/cec8d88ba54e9fef814408c46ce2e99a/map/migrate', function(list) {
-				console.log('测试get',data)
+			// $.ajaxSettings.async = false;
+			$.get('https://geo.datav.aliyun.com/areas_v2/bound/320000.json', function(list) {
+				console.log('测试getsssssss',list)
+			})
+			$.getJSON('https://geo.datav.aliyun.com/areas_v2/bound/320000.json', function(list) {
+				console.log('测试getJSON',list)
 			})
 			
 			$.ajax({
-				url: "https://www.fastmock.site/mock/cec8d88ba54e9fef814408c46ce2e99a/map/migrate",
-				dataType: "jsonp",
+				url: "https://geo.datav.aliyun.com/areas_v2/bound/320000_full.json",
 				type:"get",
 				success: function(data) {
-						console.log('测试ajax',data)
+					console.log('测试ajax',data)
 				}
 			})
 			
