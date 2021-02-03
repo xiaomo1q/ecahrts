@@ -317,7 +317,7 @@ $(function () {
                 color: '#fff'
             },
             icon:"circle",
-            selectedMode: 'single'
+            // selectedMode: 'single'
         },
         color: ['#4ab2e5'],
         geo: {
