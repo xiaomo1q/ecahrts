@@ -310,8 +310,8 @@ $(function () {
         },
         legend: {
             orient: 'vertical',
-            top: 'bottom',
-            left: 'left',
+            bottom: '5%',
+            right: '30%',
             data: ['全部','100-25', '25-15', '15-10',"10-0"],
             textStyle: {
                 color: '#fff'
