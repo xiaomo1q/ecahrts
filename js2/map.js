@@ -311,7 +311,7 @@ $(function () {
         legend: {
             orient: 'vertical',
             bottom: '5%',
-            right: '10%',
+            right: '18%',
             data: ['全部','100-25', '25-15', '15-10',"10-0"],
             textStyle: {
                 color: '#fff'
