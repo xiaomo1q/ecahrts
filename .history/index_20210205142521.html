@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="./index1.css" />
+	<title>上海与全国主要城市间区域联动综合指数</title>
+</head>
+<style>
+	.body {
+		width: 951px;
+		height: 100%;
+		min-height: 500px;
+		margin: auto;
+		position: relative;
+	}
+
+	.body-con {
+		min-height: 611px;
+		position: absolute;
+	}
+
+	.toogle {
+		position: absolute;
+		width: 80%;
+		display: flex;
+		color: aliceblue;
+		justify-content: space-between;
+		align-items: center;
+		min-height: 611px;
+		z-index: -1;
+	}
+
+	.toop {
+		background: url("./img/toop.png") no-repeat;
+		background-size: 100% 100%;
+		width: 130px;
+		height: 35px;
+	}
+
+	.toop .bg {
+		width: 80%;
+		height: 30px;
+		/* margin: auto; */
+		margin-left: 10px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.toogle .left{
+		background: url("./img/toop.png") no-repeat;
+		background-size: 100% 100%;
+	}
+
+	.toop .bg p:nth-child(1) {
+		font-family: Rationale;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+		color: #E6F3FF;
+	}
+
+	.toop .bg p:nth-child(2) {
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: bold;
+		/* font-size: 16px; */
+		color: #FFE86E;
+	}
+</style>
+
+<body>
+	<header><span style="font-size: 22px;">上海与全国主要城市间区域联动综合指数</span></header>
+	<div class="body">
+
+		<div class="body-con" id="body-con" style="width: 100%; height: 100%;"></div>
+		<div class="toogle">
+			<div class="left">left</div>
+			<div class="right">right</div>
+		</div>
+	</div>
+
+	<script src="https://cdn.staticfile.org/echarts/4.5.0/echarts.min.js"></script>
+
+	<script src="./js2/china-line.js"> </script>
+	<script src="./js2/data.js"> </script>
+	<script src="https://www.makeapie.com/dep/echarts/map/js/china.js"></script>
+
+	<script src="./js2/map.js"> </script>
+	<script src="./js2/map2.js"> </script>
+	<script src="./js2/map3.js"> </script>
+	<script>
+		$(function () {
+			var myChart1 = echarts.init(document.getElementById('body-con'));
+			mapChart.amap()
+			myChart1.setOption(option);
+
+			$('.left').click(function () {
+				mapChart.amap()
+				myChart1.clear()
+				myChart1.setOption(option);
+			})
+
+			$('.right').click(function () {
+				mapChart2.amap()
+				myChart1.clear()
+				myChart1.setOption(option);
+			})
+		})
+	</script>
+</body>
+
+</html>
