@@ -56,7 +56,7 @@ $(function () {
                                 normal: {
                                     areaColor: {
                                         image: imageDom, // 支持为 HTMLImageElement, HTMLCanvasElement，不支持路径字符串
-                                        repeat: 'repeat-y', // 是否平铺，可以是 'repeat-x', 'repeat-y', 'no-repeat'
+                                        repeat: 'no-repeat', // 是否平铺，可以是 'repeat-x', 'repeat-y', 'no-repeat'
                                     },
                                     // areaColor: "#061E3D",
                                     borderColor: {
@@ -164,9 +164,9 @@ $(function () {
                                         return params.data.name;
                                     },
                                     fontSize: 8,
-                                    // fontFamily: "PingFang HK",
-                                    // fontStyle: "normal",
-                                    // fontWeight: 400
+                                    fontFamily: "PingFang HK",
+                                    fontStyle: "normal",
+                                    fontWeight: 400
                                 },
                                 emphasis: {
                                     show: true
@@ -308,9 +308,9 @@ $(function () {
                                             color: '#e4edff' // 100% 处的颜色
                                         }],
                                     },
-                                    borderWidth: 3,
+                                    borderWidth: 4,
                                     shadowBlur: 20,
-                                    shadowColor: 'rgba(29,119,255,0.6)',
+                                    shadowColor: 'rgb(58,115,192)',
                                     shadowOffsetX: 0,
                                     shadowOffsetY: 10,
                                     // borderColor: '#0177ff'
@@ -352,7 +352,7 @@ $(function () {
                             //     }
                             // }
                         }, {
-                            map: 'chinaMapOutline',
+                            map: 'china',
                             show: true,
                             roam: false,
                             zlevel:-1,
@@ -361,19 +361,19 @@ $(function () {
                                     show: true
                                 }
                             },
-                            zoom: 1,
-                            top: "9.2%",
-                            left: '5%',
+                            zoom: 1.5,
+                            top: "29.5%",
+                            left: '18.5%',
                             layoutSize: "100%",
                             itemStyle: {
                                 normal: {
                                     areaColor: "transparent",
                                     // opacity:0.4,
                                     // shadowColor: '#4ab2e5', //外发光
-                                    borderColor: '#4771db',
-                                    borderWidth: 0.5,
+                                    borderColor: '#4c7aa1',
+                                    borderWidth: 1,
                                     shadowBlur: 20,
-                                    shadowColor: 'rgba(9,32,67,1)',
+                                    shadowColor: 'rgb(58,115,192)',
                                     shadowOffsetX: 0,
                                     shadowOffsetY: 10,
                                     // borderColor: '#0177ff'

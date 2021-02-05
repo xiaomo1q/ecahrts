@@ -362,8 +362,8 @@ $(function () {
                                 }
                             },
                             zoom: 1,
-                            top: "9.2%",
-                            left: '5%',
+                            top: "9%",
+                            left: '6%',
                             layoutSize: "100%",
                             itemStyle: {
                                 normal: {

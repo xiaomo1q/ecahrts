@@ -12,7 +12,7 @@ $(function () {
 
                     var imageDom = document.createElement('img'); // 使用 DOM HTMLImageElement
                     // imageDom.src = 'http://39.106.255.75/siteimg/e195b1cbd888b6b983397c013047e3c.png';
-                    imageDom.src = './img/s.png';
+                    imageDom.src = './img/s.jpg';
                     imageDom.width = 800;
                     imageDom.height = 600;
 
@@ -308,9 +308,9 @@ $(function () {
                                             color: '#e4edff' // 100% 处的颜色
                                         }],
                                     },
-                                    borderWidth: 3,
+                                    borderWidth: 4,
                                     shadowBlur: 20,
-                                    shadowColor: 'rgba(29,119,255,0.6)',
+                                    shadowColor: 'rgb(58,115,192)',
                                     shadowOffsetX: 0,
                                     shadowOffsetY: 10,
                                     // borderColor: '#0177ff'
@@ -352,7 +352,7 @@ $(function () {
                             //     }
                             // }
                         }, {
-                            map: 'chinaMapOutline',
+                            map: 'china',
                             show: true,
                             roam: false,
                             zlevel:-1,
@@ -361,19 +361,19 @@ $(function () {
                                     show: true
                                 }
                             },
-                            zoom: 1,
-                            top: "9.2%",
-                            left: '5%',
+                            zoom: 1.5,
+                            top: "29.5%",
+                            left: '18.5%',
                             layoutSize: "100%",
                             itemStyle: {
                                 normal: {
                                     areaColor: "transparent",
                                     // opacity:0.4,
                                     // shadowColor: '#4ab2e5', //外发光
-                                    borderColor: '#4771db',
-                                    borderWidth: 0.5,
+                                    borderColor: '#4c7aa1',
+                                    borderWidth: 1,
                                     shadowBlur: 20,
-                                    shadowColor: 'rgba(9,32,67,1)',
+                                    shadowColor: 'rgb(58,115,192)',
                                     shadowOffsetX: 0,
                                     shadowOffsetY: 10,
                                     // borderColor: '#0177ff'

@@ -362,7 +362,7 @@ $(function () {
                                 }
                             },
                             zoom: 1,
-                            top: "9.2%",
+                            top: "9.5%",
                             left: '5%',
                             layoutSize: "100%",
                             itemStyle: {
@@ -371,7 +371,7 @@ $(function () {
                                     // opacity:0.4,
                                     // shadowColor: '#4ab2e5', //外发光
                                     borderColor: '#4771db',
-                                    borderWidth: 0.5,
+                                    borderWidth: 1,
                                     shadowBlur: 20,
                                     shadowColor: 'rgba(9,32,67,1)',
                                     shadowOffsetX: 0,

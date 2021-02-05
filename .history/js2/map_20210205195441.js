@@ -362,7 +362,7 @@ $(function () {
                                 }
                             },
                             zoom: 1,
-                            top: "9.2%",
+                            top: "9.5%",
                             left: '5%',
                             layoutSize: "100%",
                             itemStyle: {
